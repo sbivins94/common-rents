@@ -1,0 +1,24 @@
+CREATE TABLE renters (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  age INT NOT NULL,
+  gender VARCHAR(50),
+  occupation VARCHAR(100),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE landlords (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  contact_info TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE properties (
+  id SERIAL PRIMARY KEY,
+  landlord_id INT NOT NULL REFERENCES landlords(id),
+  address TEXT NOT NULL,
+  rent INT NOT NULL,
+  description TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
