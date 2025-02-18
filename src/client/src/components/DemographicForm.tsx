@@ -37,24 +37,48 @@ function DemographicForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Name:</label>
-        <input type="text" name="name" value={formData.name} onChange={handleChange} />
+    <form onSubmit={handleSubmit} className="container mt-4">
+      <div className="mb-3">
+        <label className="form-label">Name:</label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          className="form-control"
+        />
       </div>
-      <div>
-        <label>Age:</label>
-        <input type="number" name="age" value={formData.age} onChange={handleChange} />
+      <div className="mb-3">
+        <label className="form-label">Age:</label>
+        <input
+          type="number"
+          name="age"
+          value={formData.age}
+          onChange={handleChange}
+          className="form-control"
+        />
       </div>
-      <div>
-        <label>Gender:</label>
-        <input type="text" name="gender" value={formData.gender} onChange={handleChange} />
+      <div className="mb-3">
+        <label className="form-label">Gender:</label>
+        <input
+          type="text"
+          name="gender"
+          value={formData.gender}
+          onChange={handleChange}
+          className="form-control"
+        />
       </div>
-      <div>
-        <label>Occupation:</label>
-        <input type="text" name="occupation" value={formData.occupation} onChange={handleChange} />
+      <div className="mb-3">
+        <label className="form-label">Occupation:</label>
+        <input
+          type="text"
+          name="occupation"
+          value={formData.occupation}
+          onChange={handleChange}
+          className="form-control"
+        />
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" className="btn btn-primary">Submit</button>
     </form>
   );
 }
