@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import App from "./App";
+import { KindeProvider } from "@kinde-oss/kinde-auth-react";
+import kindeConfig from "./kindeConfig";
+import reportWebVitals from "./reportWebVitals";
+
+const { clientId, domain, redirectUri, logoutUri } = kindeConfig;
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <KindeProvider
+    clientId={clientId}
+    domain={domain}
+    redirectUri={redirectUri}
+    logoutUri={logoutUri}
+  >
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </KindeProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
