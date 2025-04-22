@@ -2,9 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import LandingPage from "./pages/LandingPage";
-import { useKindeAuth } from '@kinde-oss/kinde-auth-react';
-import LoginPage from "./pages/LoginPage";
-import RenterFormPage from "./pages/RenterFormPage";
+import { useKindeAuth } from "@kinde-oss/kinde-auth-react";
+import LoginPage from "./pages/renters/RenterLoginPage";
+import RenterFormPage from "./pages/renters/RenterFormPage";
 import "./App.css";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/login-renter" element={<LoginPage />} />
         <Route path="/renter-form" element={<RenterFormPage />} />
       </Routes>
     </Router>

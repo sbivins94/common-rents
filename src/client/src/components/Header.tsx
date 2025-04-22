@@ -10,10 +10,13 @@ function Header() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <Link to="/login-renter">Login as renter</Link>
           </li>
           <li>
             <Link to="/renter-form">Renter Form</Link>
+          </li>
+          <li>
+            <Link to="/logout">Logout</Link>
           </li>
         </ul>
       </nav>
